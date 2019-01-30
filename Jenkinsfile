@@ -1,6 +1,10 @@
 //START-OF-SCRIPT
 timeout(time: 60, unit: 'SECONDS') {
     node('agent1') {
+        properties([
+            pipelineTriggers([pollSCM('*/2 * * * 1-5')])
+        ])
+        
         def GRADLE_HOME = tool name: 'gradle-4.10.2', type: 'hudson.plugins.gradle.GradleInstallation'
         sh "${GRADLE_HOME}/bin/gradle tasks"
 
