@@ -4,7 +4,7 @@ node {
     sh "${GRADLE_HOME}/bin/gradle tasks"
 
     stage('Clone') {
-        git url: 'https://github.com/cloudacademy/devops-webapp.git'                
+        git url: 'https://github.com/jeremycook123/devops-webapp1.git'                
     }
 
     stage('Build') {
