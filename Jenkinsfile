@@ -9,7 +9,7 @@ timeout(time: 60, unit: 'SECONDS') {
         }
 
         stage('Build') {
-            sh "${GRADLE_HOME}/bin/gradle build"
+            sh "${GRADLE_HOME}/bin/gradle build --info"
         }
 
         stage('Archive') {
