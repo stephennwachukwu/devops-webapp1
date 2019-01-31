@@ -2,7 +2,7 @@
 timeout(time: 60, unit: 'SECONDS') {
     node('agent1') {
         properties([
-            pipelineTriggers([cron('*/1 * * * 1-5')])
+            pipelineTriggers([pollSCM('*/1 * * * 1-5')])
         ])
         
         def GRADLE_HOME = tool name: 'gradle-4.10.2', type: 'hudson.plugins.gradle.GradleInstallation'
