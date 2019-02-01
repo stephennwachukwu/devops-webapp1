@@ -8,7 +8,7 @@ node {
     }
 
     stage('Build') {
-        sh "${GRADLE_HOME}/bin/gradle build"
+        sh "${GRADLE_HOME}/bin/gradle build -PwarName=webapp.war --info"
     }
     
     stage('Archive') {
