@@ -22,12 +22,12 @@ compileJava {
 
 buildscript {
   repositories {
-    maven()
+    mavenCentral()
   }
 }
 
 repositories {
-    maven()
+    mavenCentral()
 }
 
 dependencies {
