@@ -1,5 +1,5 @@
 //START-OF-SCRIPT
-//comment2000
+//pipeline setup
 timeout(time: 30, unit: 'SECONDS') {
     node('BuildAgent1') {
         def RELEASENAME = "*.war"
