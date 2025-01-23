@@ -2,7 +2,7 @@
 //comment200
 timeout(time: 60, unit: 'SECONDS') {
     node('BuildAgent1') {
-        def RELEASENAME = "webapp.war"
+        def RELEASENAME = "*.war"
 
         properties([
             pipelineTriggers([pollSCM('H/1 * * * 1-5')])
